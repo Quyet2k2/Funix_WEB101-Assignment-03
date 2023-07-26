@@ -1,0 +1,8 @@
+/* Media query cho màn hình có chiều rộng nhỏ hơn hoặc bằng 992px (màn hình tablet) */
+@media (max-width: 991px) {
+
+  #nav-bar .info h1,
+  #nav-bar .info span {
+    display: none;
+  }
+}

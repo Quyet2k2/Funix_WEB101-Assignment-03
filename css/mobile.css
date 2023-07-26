@@ -1,0 +1,28 @@
+/* Media query cho màn hình có chiều rộng nhỏ hơn hoặc bằng 768px (màn hình di động) */
+@media (max-width: 767px) {
+
+  /* Utilities */
+  .row-line {
+    display: none;
+  }
+
+  .column-line.first {
+    display: block;
+  }
+
+  /* Nav-bar */
+  #nav-bar .info {
+    display: none;
+  }
+
+  #nav-bar .container a,
+  #nav-bar .container .info {
+    border: none;
+  }
+
+  /* Thông tin */
+
+
+
+
+}
