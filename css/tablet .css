@@ -5,4 +5,15 @@
   #nav-bar .info span {
     display: none;
   }
+
+  #job-info .col:nth-child(1) .job-info-item,
+  #job-info .col:nth-child(2) .job-info-item,
+  #job-info .col:nth-child(3) .job-info-item,
+  #job-info .col:nth-child(4) .job-info-item,
+  #job-info .col:nth-child(5) .job-info-item,
+  #job-info .col:nth-child(6) .job-info-item {
+    height: auto;
+  }
+
+
 }

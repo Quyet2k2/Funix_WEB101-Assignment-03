@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="./css/tablet .css">
   <link rel="stylesheet" href="./css/mobile.css">
   <title>Bootstrap - Assignment 03</title>
+
+  <link rel="stylesheet" href="./model-img.html">
 </head>
 
 <body>
@@ -32,7 +34,7 @@
     <p class="sub-heading">Full Stack Developer</p>
   </section>
 
-  <section id="nav-bar" class="container-fluid d-none">
+  <section id="nav-bar" class="container-fluid ">
     <div class="container">
       <nav class="row align-items-center justify-content-center text-start text-md-center ">
         <a class="col-md-2" href="#about">
@@ -73,7 +75,7 @@
     </div>
   </section>
 
-  <section id="about" class="bg-grey d-none">
+  <section id="about" class="bg-grey ">
     <div class="container row">
       <div id="target" class="col-md">
         <h1 class="section-title">Mục tiêu nghề nghiệp</h1>
@@ -121,7 +123,7 @@
   <section id="job-info" class="">
     <div class="container">
 
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3  g-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mx-lg-0 px-lg-0 g-5 mx-md-5 px-md-5">
         <!-- jii: job-info-item -->
         <div class="col">
           <div class="job-info-item">
@@ -346,15 +348,15 @@
     </div>
   </section>
 
-  <section id="certificate" class="bg-grey d-none">
+  <section id="certificate" class="bg-grey ">
     <div class="container">
       <h1 class="section-title">
         Chứng chỉ - Giải thưởng
       </h1>
 
-      <div class="certificate-content justify-content-center px-3">
-        <div class="row align-items-center">
-          <div class="certificate-item col col-md-6 my-5 px-4">
+      <div class="certificate-content justify-content-center px-lg-0 mx-lg-0 px-3 px-md-5 mx-md-5">
+        <div class="row align-items-center ">
+          <div class="certificate-item col col-lg-6 my-5 px-4 ">
             <div class="row">
               <div class="item-img col-lg-5">
                 <img src="./images/Cert_DBI.png" alt="cert1">
@@ -371,10 +373,10 @@
             </div>
           </div>
 
-          <div class="row-line"></div>
+          <div class="row-line"></div> 
           <div class="column-line first"></div>
 
-          <div class="certificate-item col col-md-6 my-5 px-4">
+          <div class="certificate-item col col-lg-6 my-5 px-4">
             <div class="row">
               <div class="item-img col-lg-5">
                 <img src="./images/Cert_PRF.png" alt="">
@@ -395,7 +397,7 @@
         <div class="column-line"></div>
 
         <div class="row align-items-center">
-          <div class="certificate-item col col-md-6 my-5 px-4">
+          <div class="certificate-item col col-lg-6 my-5 px-4">
             <div class="row">
               <div class="item-img col-lg-5">
                 <img src="./images/Cert_WEB.png" alt="">
@@ -416,17 +418,16 @@
     </div>
   </section>
 
-  <section id="project" class="d-none">
+  <section id="project" class="">
     <div class="container">
       <h1 class="section-title">
         Dự án
       </h1>
 
-      <div class="project-content">
+      <div class="project-content row row-cols-lg-3 g-lg-5 px-3 py-4">
 
-        <div class="project-item">
+        <div class="project-item col">
           <img src="./images/project_1.png" alt="project-1" class="project-img">
-
           <div class="pi-body">
             <div class="item-heading">
               <h3 class="heading">CV CÁ NHÂN</h3>
@@ -463,10 +464,9 @@
               <p>- HTML, CSS</p>
             </div>
           </div>
-
         </div>
 
-        <div class="project-item">
+        <div class="project-item col">
           <img src="./images/project_2.png" alt="project-2" class="project-img">
 
           <div class="pi-body">
@@ -509,7 +509,7 @@
 
         </div>
 
-        <div class="project-item">
+        <div class="project-item col">
           <img src="./images/project_3.png" alt="project-3" class="project-img">
 
           <div class="pi-body">
@@ -556,7 +556,7 @@
     </div>
   </section>
 
-  <section id="footer" class="bg-grey d-none">
+  <section id="footer" class="bg-grey ">
     <div class="container">
       <ul class="social-footer-list">
         <li>
@@ -579,7 +579,24 @@
 </body>
 
 <!-- bootstrap script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<script>
+  function resizeChildHeight() {
+    var parentHeight = $('.certificate-item').height();
+    $('.row-line').css('height', parentHeight + 'px');
+  }
+
+  $(document).ready(function() {
+    resizeChildHeight(); // Gọi hàm để cài đặt kích thước ban đầu
+
+    // Khi cửa sổ trình duyệt thay đổi kích thước, gọi lại hàm
+    $(window).on('resize', function() {
+      resizeChildHeight();
+    });
+  });
+</script>
 
 </html>

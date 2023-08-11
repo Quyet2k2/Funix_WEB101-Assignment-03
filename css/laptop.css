@@ -224,13 +224,13 @@ a span {
 #job-info .col:nth-child(1) .job-info-item,
 #job-info .col:nth-child(2) .job-info-item,
 #job-info .col:nth-child(3) .job-info-item {
-  min-height: 636px;
+  height: 636px;
 }
 
 #job-info .col:nth-child(4) .job-info-item,
 #job-info .col:nth-child(5) .job-info-item,
 #job-info .col:nth-child(6) .job-info-item {
-  min-height: 454px;
+  height: 454px;
 }
 
 
@@ -384,9 +384,8 @@ a span {
 }
 
 .row-line {
-  min-height: 110px;
   width: 0;
-  padding: 0;
+  padding: 0; 
   border: 1px solid rgba(185, 125, 15, 0.294);
 }
 
@@ -402,16 +401,15 @@ a span {
 }
 
 #project .project-content {
-  display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(3, 370px);
+  /* display: grid; */
+  /* gap: 32px; */
+  /* grid-template-columns: repeat(3, 370px); */
 
-  padding: 32px 0 0 16px;
+  /* padding: 32px 0 0 16px; */
 }
 
 .project-content .project-item {
   font-weight: 600;
-  max-width: 370px;
 }
 
 .project-item .project-img {
@@ -421,6 +419,7 @@ a span {
 
 .project-item .pi-body {
   min-height: 300px;
+  width: 370px;
   border: 1px solid #eee;
 }
 
@@ -447,6 +446,10 @@ a span {
   padding: 16px;
 }
 
+#project .pi-body h3 {
+  font-size: 14px;
+}
+
 .detail-heading span {
   font-size: 10px;
   border-radius: 24px;
@@ -459,14 +462,16 @@ a span {
 .pi-body .detail-heading p,
 .pi-body .detail-heading i {
   padding: 4px 8px;
-  font-size: 15px;
+  /* font-size: 15px; */
+  margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 /* certificate & project */
 #certificate .container .section-title,
 #project .container .section-title {
   font-size: 30px;
-  padding: 58px 0 0px 16px;
+  padding: 58px 0 0px 8px;
 }
 
 #footer .container {
